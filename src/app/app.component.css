@@ -1,0 +1,47 @@
+div label{
+    display: block;
+}
+
+.header{
+    padding: 5px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+button:disabled{
+    color: #aaa;
+    background-color: #777;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #ccc;
+    margin: 5px;
+}
+
+input{
+    padding: 8px;
+    margin: 5px;
+}
+
+.items{
+    font-size: 20px;
+    color: #333;
+    padding: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #333;
+}
+
+.progress-bar {
+    height: 20px;
+    width: calc(100% - 18px);
+    margin: 8px;
+    border: 1px solid;
+    background-color: white;
+    position: fixed;
+}
