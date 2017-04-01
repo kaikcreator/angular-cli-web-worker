@@ -43,6 +43,9 @@ module.exports = {
     ],
     "styles": [
       "./src/styles.css"
+    ],
+    "webworker": [
+      './src/webWorker/workerLoader.ts'
     ]
   },
   "output": {
@@ -213,7 +216,9 @@ module.exports = {
       "cache": true,
       "showErrors": true,
       "chunks": "all",
-      "excludeChunks": [],
+      "excludeChunks": [
+        'webworker'
+      ],
       "title": "Webpack App",
       "xhtml": true,
       "chunksSortMode": function sort(left, right) {
@@ -231,10 +236,10 @@ module.exports = {
     }
     }),
     new BaseHrefWebpackPlugin({}),
-    new CommonsChunkPlugin({
-      "name": "inline",
-      "minChunks": null
-    }),
+//    new CommonsChunkPlugin({
+//      "name": "inline",
+//      "minChunks": null
+//    }),
     new CommonsChunkPlugin({
       "name": "vendor",
       "minChunks": (module) => module.resource && module.resource.startsWith(nodeModules),
@@ -284,6 +289,7 @@ module.exports = {
     }),
     new AotPlugin({
       "mainPath": "main.ts",
+      "entryModule": 'app/app.module#AppModule',
       "hostReplacementPaths": {
         "environments/environment.ts": "environments/environment.ts"
       },
