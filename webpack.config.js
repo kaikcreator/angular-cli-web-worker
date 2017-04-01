@@ -236,10 +236,19 @@ module.exports = {
     }
     }),
     new BaseHrefWebpackPlugin({}),
-//    new CommonsChunkPlugin({
-//      "name": "inline",
-//      "minChunks": null
-//    }),
+// See this to understand why is used the inline chunk
+// https://webpack.js.org/guides/code-splitting-libraries/#manifest-file
+// here we are generating a common chunk with webpackBootstrap for all entryPoints
+// except webworker, because webworker needs to contain webpackBootstrap by itself
+    new CommonsChunkPlugin({
+      "name": "inline",
+      "minChunks": null,
+      "chunks":[
+        "main",
+        "polyfills",
+        "styles"
+      ]
+    }),
     new CommonsChunkPlugin({
       "name": "vendor",
       "minChunks": (module) => module.resource && module.resource.startsWith(nodeModules),
