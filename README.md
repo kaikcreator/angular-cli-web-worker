@@ -2,12 +2,26 @@
 
 This is an example on how to update and Angular project (generated with angular-cli) in order to use Web Workers.
 
+The example is a CPU intensive factorial calculator client that compute 50 factorial numbers starting by the number introduced in the form.
+
 **Do you wanna see it in action? Check [the demo](https://kaikcreator.github.io/angular-cli-web-worker/)**
 
-## Install
-When you enter for first time the master (web workers) on single-threaded branch, you'll need to install the dependencies.
+In this repo you will 2 dev branches:
 
-Run `npm install` to do so.
+* master: the web workers version
+* single-threaded: the single threaded version
+
+## Install
+Each branch require their own dependencies. 
+
+You can install them using: `npm install`
+
+## Update code from single-threaded to web workers scenario
+If you want to try by yourself:
+
+1. move to single-threaded branch
+2. Run `ng eject` to generate the webpack 2 file
+3. Run a *diff* with master branch in order to understand the changes.
 
 ## Development server (single threaded)
 
