@@ -7,26 +7,35 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
     </head>
 
     <body>
-        <div class="main">
-            <div class="header">
-                <h3 class="panel-title v-center">Choose one of the 2 options</h3>
+
+        <nav class="blue-grey darken-1">
+            <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Angular Web Workers factorial example</a>
             </div>
-            <div class="content">
-                <a href="./dist-web-worker">Go to web workers factorial</a>
-                <a href="./dist-single-threaded">Go to single threaded factorial</a>
+        </nav>
+
+        <main>
+            <div class="text">
+                <p>This demo shows the performance improvements achieved when bootstraping Angular with web workers.</p>
+                <p>Try both options to compare:</p>
             </div>
+            <div class="buttons">
+                <a class="waves-effect waves-light btn" href="./dist-web-worker">Go to web workers factorial</a>
+                <a class="waves-effect waves-light btn" href="./dist-single-threaded">Go to single threaded factorial</a>
+            </div>
+        </main>
             
-            <div class="footer">
-                Enrique Oriol
+        <footer class="page-footer blue-grey darken-1">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright Enrique Oriol
+            <a class="grey-text text-lighten-4 right" href="https://blog.enriqueoriol.com/" target="_blank">Go to my blog</a>
             </div>
-
-        </div>
-
-        <script src="vendor/angular/angular.js"></script>
-        
-
+          </div>
+        </footer>
     </body>
 </html>

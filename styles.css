@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    flex-grow: 1;
+    justify-content: space-around;
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+}
+
+main div{
+    padding:10px;
+}
+
+main .text{
+    flex: 1;
+}
+
+main .buttons{
+    flex: 2;
+}
+
+main .buttons a{
+    margin: 10px;
+}
