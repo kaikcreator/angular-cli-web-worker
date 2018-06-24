@@ -47,7 +47,7 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0",
-    "webpack-dev-server": "~2.3.0",
+    "webpack-dev-server": "~2.5.0",
     "autoprefixer": "^6.5.3",
     "css-loader": "^0.26.1",
     "cssnano": "^3.10.0",
